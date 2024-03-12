@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  #frm-join{
+  border : 1px solid black;
+  width: 230px;
+  height: 178px;
+  padding: 10px;
+  }
+</style>
+</head>
+<body>
+<form    
+          id="frm-join"
+          action="/servlet/test4"
+          method="post">
+      <div>
+        <label for="author">작성자</label>
+        <input type="text" id="author" name="author">
+      </div>
+            <div>
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title">
+      </div>
+        <textarea rows="6" cols="30" placeholder="내용" id="text" name="text"></textarea>
+        <br>
+        <button type="submit">작성완료</button>
+        <button type="reset">초기화</button>
+    </form>
+    
+<script>
+
+
+
+</script>
+
+</body>
+</html>

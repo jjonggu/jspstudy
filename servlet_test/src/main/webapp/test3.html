@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <select name="ctime" id="ctime">
+  
+    <option value="1" selected>현재날짜</option>
+    <option value="2">현재시간</option>
+     </select>
+     <button type="button" id="btn">요청하기</button>
+    <span id="a"></span>
+
+<script>
+document.querySelector("#btn").onclick = ()=>{
+	const today = new Date();   
+
+	const year = today.getFullYear(); // 년도
+	const month =  ('0' + (today.getMonth() + 1)).slice(-2);  // 월
+	const date = ('0' + today.getDate()).slice(-2);  // 날짜
+	const hours = ('0' + today.getHours()).slice(-2) ; // 시
+	const minutes = ('0' + today.getMinutes()).slice(-2)  ;  // 분
+	const seconds = ('0' + today.getSeconds()).slice(-2) ;  // 초
+  if(document.querySelector("#ctime").value ==1){
+	  alert("요청 결과는 " + year +"-"+ month + "-"+ date+"입니다.");
+  }else{
+	  alert("요청 결과는 " + hours+":"+minutes+":"+seconds+"입니다.");
+  }
+}
+
+</script>
+</body>
+</html>

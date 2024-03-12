@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button type="button" id="btn">새로고침</button>
+<br>
+
+<span id="sik">
+</span>
+<input type="text" size="4" id="answer">
+<button type="button" id="answer-chk">계산</button>
+
+
+<script>
+document.querySelector("#btn").onclick = ()=>{
+	
+	
+const randomNum1 = Math.floor((Math.random() * 8) + 2);
+const randomNum2 = Math.floor((Math.random() * 8) + 2);
+const sik = randomNum1 + " X " + randomNum2 + " = ";
+
+document.querySelector("#sik").innerHTML =sik;
+document.querySelector("#answer-chk").onclick = (evt)=>{
+	if(document.querySelector("#answer").value == randomNum1*randomNum2){
+		alert("정답입니다");
+	}else{
+		alert("오답입니다");
+	}
+	
+}
+
+}
+
+
+</script>
+</body>
+</html>
